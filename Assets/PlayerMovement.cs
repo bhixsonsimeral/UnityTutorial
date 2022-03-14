@@ -29,11 +29,11 @@ public class PlayerMovement : MonoBehaviour
         // This implementation also does not allow for substitute keys
         if (Input.GetKey("d") )
         {
-            rigidbody.AddForce(sidewaysForce * Time.deltaTime, 0, 0);
+            rigidbody.AddForce(sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
         if (Input.GetKey("a"))
         {
-            rigidbody.AddForce(-sidewaysForce * Time.deltaTime, 0, 0);
+            rigidbody.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
     }
 }
