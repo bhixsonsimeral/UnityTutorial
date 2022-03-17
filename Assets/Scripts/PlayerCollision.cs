@@ -11,6 +11,7 @@ public class PlayerCollision : MonoBehaviour
 
             // Disable the entire script upon colliding with an Obstacle
             movement.enabled = false;
+            FindObjectOfType<GameManager>().EndGame();
         }
     }
 }
